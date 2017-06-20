@@ -1,7 +1,9 @@
-Server Side Rendering with Create React App
+React Wordpress Starter Kit
 ===========================================
 
-This is the v2 version of my react app, checkout my article here: https://medium.com/@benlu/ssr-with-create-react-app-v2-1b8b520681d9
+This starter kit incorperates server side rendering, an API to communicate with an external Wordpress site, and an API to communicate with the Mailchimp API to add new subscribers and get existing subscribers.
+
+You can see an example of these elements combined at: https://wesvance.com
 
 Install
 -------
@@ -17,3 +19,8 @@ This just runs create react app, its great!
 npm start
 ```
 
+
+
+
+### Forked
+The base SSR starter kit was forked from ayroblu's ssr-create-react-app-v2 which can be found here: https://github.com/ayroblu/ssr-create-react-app-v2
