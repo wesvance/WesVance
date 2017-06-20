@@ -1,36 +1,26 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~font-awesome/css/font-awesome.css';
 
-// @import "globals";
+@import "globals";
 
-// @import './common/buttons';
-// @import './common/forms';
-// @import './common/text';
-// @import './common/fonts';
-// @import './common/links';
-// @import './common/lists';
-// @import './common/pageElements';
-// @import './common/images';
+@import './common/buttons';
+@import './common/forms';
+@import './common/text';
+@import './common/fonts';
+@import './common/links';
+@import './common/lists';
+@import './common/pageElements';
+@import './common/images';
 
-// html {
-//   user-select: none;
-//   -webkit-user-select: none;
-//   height: 100%;
-// }
-
-// body {
-//   margin: 0;
-//   padding: 0;
-//   font-family: sans-serif;
-//   height: 100%;
-// }
+html {
+  user-select: none;
+  -webkit-user-select: none;
+  height: 100%;
+}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  padding:0;
-  margin:0;
-  text-align: center;
+  font-family: sans-serif;
+  height: 100%;
 }

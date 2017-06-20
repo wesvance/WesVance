@@ -1,22 +1,44 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import FirstPage from './FirstPage'
-import SecondPage from './SecondPage'
-import NoMatch from '../components/NoMatch'
+
+// import '../assets/styles/components/App.scss';
+
+// import ReactSpinner from './common/ReactSpinner';
+import NavBar from './common/NavBar';
+
+import {Helmet} from "react-helmet";
+// =======
+// ROUTES
+// =======
+import WelcomePage from './welcome/WelcomePage';
+import BlogPage from './blog/BlogPage';
+import PostPage from './blog/post/PostPage';
+import AboutPage from './about/AboutPage';
+import Error404Page from './error/Error404Page';
 
 export default class App extends Component {
   render(){
     return (
-      <div>
-        <h1>Server Side Rendering with Create React App v2</h1>
-        <p>Hey, so I've rewritten this example with react-router v4</p>
-        <p>This code is on github: <a href='https://github.com/ayroblu/ssr-create-react-app-v2'>https://github.com/ayroblu/ssr-create-react-app-v2</a></p>
-        <p>Medium article: <a href='https://medium.com/@benlu/ssr-with-create-react-app-v2-1b8b520681d9'>https://medium.com/@benlu/ssr-with-create-react-app-v2-1b8b520681d9</a></p>
-        <Switch>
-          <Route exact path="/" component={FirstPage}/>
-          <Route path="/second" component={SecondPage}/>
-          <Route component={NoMatch}/>
-        </Switch>
+      <div id="contentWrapper">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>WesVance: Business, Code & Design for Creative Entreprnuers</title>
+          <link rel="canonical" href="http://wesvance.com/" />
+        </Helmet>
+        <div className="App">
+          <div id="appBody">
+            <Switch>
+              <Route exact path="/" component={WelcomePage}/>
+              <Route path="/about" component={AboutPage}/>
+              <Route path="/posts" component={BlogPage} />
+              <Route path='/posts/:postSlug' component={PostPage} />
+              <Route component={Error404Page} />
+            </Switch>
+          </div>
+          <div id="appNav">
+            <NavBar/>
+          </div>
+        </div>
       </div>
     )
   }

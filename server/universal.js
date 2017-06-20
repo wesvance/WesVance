@@ -6,7 +6,7 @@ const {Provider} = require('react-redux')
 const {renderToString} = require('react-dom/server')
 const {StaticRouter} = require('react-router-dom')
 
-const {default: configureStore} = require('../src/store')
+const {default: configureStore} = require('../src/store/store')
 const {default: App} = require('../src/containers/App')
 
 module.exports = function universalLoader(req, res) {

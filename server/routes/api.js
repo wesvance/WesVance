@@ -25,12 +25,12 @@ router.get('/', function(req, res, next) {
 router.get('/posts', function(req,res,next){
   axios({
     method: 'get',
-    url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/posts?_embed'`,
+    url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/posts?_embed`,
   }).then(function (response) {
     return res.status(200).json({response: response.data})
   })
   .catch(function (error) {
-    return res.json(200, {response: error.response.data})
+    return res.status(500).json({response: error.response.data})
   });
 })
 
@@ -40,7 +40,7 @@ router.get('/posts/:slug', function(req,res,next){
     console.log(req.params.slug)
     axios({
       method: 'get',
-      url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/posts?slug=' + req.params.slug + '&_embed'`,
+      url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/posts?slug=' + req.params.slug + '&_embed`,
     }).then(function (response) {
       return res.status(200).json({response: response.data})
     })
@@ -52,7 +52,7 @@ router.get('/posts/:slug', function(req,res,next){
     console.log(req.params.slug)
     axios({
       method: 'get',
-      url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/posts/' + req.params.slug + '?_embed'`,
+      url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/posts/' + req.params.slug + '?_embed`,
     }).then(function (response) {
       return res.status(200).json({response: response.data})
       // return res.status(200).json({response: response.data})
@@ -72,7 +72,7 @@ router.post('/posts/:id/comments', function(req,res,next){
   console.log("CREATING A NEW COMMENT ON POST  ID: " + JSON.stringify(params))
   axios({
     method: 'post',
-    url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/comments'`,
+    url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/comments`,
     data: {
       post: params.id,
       content: params.body,
@@ -89,7 +89,7 @@ router.post('/posts/:id/comments', function(req,res,next){
 router.get('/categories', function(req, res,next){
   axios({
     method: 'get',
-    url: `${process.env.MAILCHIMP_USERNAME}/wp-json/wp/v2/categories?_embed`'
+    url: `${process.env.MAILCHIMP_USERNAME}/wp-json/wp/v2/categories?_embed`
   }).then(function (response){
     return res.status(200).json({response: response.data})
   }).catch(function(error){

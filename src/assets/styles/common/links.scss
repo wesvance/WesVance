@@ -1,0 +1,15 @@
+@import '../globals';
+
+a{
+  color: $primary-color;
+  text-decoration: none !important;
+}
+a:hover{
+  color: $primary-color;
+  text-decoration: none;
+}
+a:visited{
+  // color: 
+  text-decoration: none;
+}
+

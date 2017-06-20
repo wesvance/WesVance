@@ -8,6 +8,10 @@ const fs = require('fs')
 
 require('babel-register')({ ignore: /\/(build|node_modules)\//, presets: ['react-app'] })
 
+if(process.env.NODE_ENV !== 'production'){
+	require('dotenv').config()
+}
+
 // routes
 const index = require('./routes/index')
 const api = require('./routes/api')

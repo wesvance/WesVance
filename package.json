@@ -32,6 +32,7 @@
     "filesize": "3.3.0",
     "font-awesome": "^4.7.0",
     "fs-extra": "0.30.0",
+    "fuse.js": "^3.0.0",
     "gzip-size": "3.0.0",
     "html-webpack-plugin": "2.24.0",
     "http-proxy-middleware": "0.17.2",
@@ -46,6 +47,8 @@
     "promise": "7.1.1",
     "react-confetti": "^1.1.5",
     "react-dev-utils": "^0.4.2",
+    "react-helmet": "^5.1.3",
+    "react-spinkit": "^3.0.0",
     "recursive-readdir": "2.1.0",
     "redux": "^3.7.0",
     "redux-logger": "^3.0.6",
@@ -63,6 +66,7 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "compression": "^1.6.2",
+    "dotenv": "^2.0.0",
     "express": "^4.15.2",
     "ignore-styles": "^5.0.1",
     "morgan": "^1.8.1",
@@ -70,7 +74,8 @@
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6"
   },
   "scripts": {
     "start": "node scripts/start.js",
