@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
-import configureStore from './store'
-import './index.css'
+import configureStore from './store/configureStore'
+import './assets/styles/index.scss'
 import App from './containers/App'
 
 // Let the reducers handle initial state
@@ -19,5 +19,3 @@ ReactDOM.render(
   </Provider>
 , document.getElementById('root')
 )
-
-

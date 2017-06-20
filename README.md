@@ -19,8 +19,5 @@ This just runs create react app, its great!
 npm start
 ```
 
-
-
-
 ### Forked
 The base SSR starter kit was forked from ayroblu's ssr-create-react-app-v2 which can be found here: https://github.com/ayroblu/ssr-create-react-app-v2
