@@ -8,7 +8,7 @@ router.use(function(req, res, next) {
   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
 
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-
+  res.header("Content-Type", 'application/json')
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -23,6 +23,7 @@ router.get('/', function(req, res, next) {
 // WORDPRESS API CALLS
 // ====================
 router.get('/posts', function(req,res,next){
+  console.log("POSTS HIT HERE! PROCESS ENV HERE", process.env.WORDPRESS_BASE_URL)
   axios({
     method: 'get',
     url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/posts?_embed`,
@@ -40,7 +41,7 @@ router.get('/posts/:slug', function(req,res,next){
     console.log(req.params.slug)
     axios({
       method: 'get',
-      url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/posts?slug=' + req.params.slug + '&_embed`,
+      url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/posts?slug=${req.params.slug}&_embed`,
     }).then(function (response) {
       return res.status(200).json({response: response.data})
     })
@@ -65,10 +66,9 @@ router.get('/posts/:slug', function(req,res,next){
 
 // CREATE A COMMENT: /wp/v2/comments
 router.post('/posts/:id/comments', function(req,res,next){
+  console.log("POSTS HIT HERE! PROCESS ENV HERE", process.env.WORDPRESS_BASE_URL)
   let params = _.extend(req.query || {}, req.params || {}, req.body || {});
 
-  // NEED TO ADD WP KEY HERE
-  // CREATING A NEW COMMENT ON POST  ID: {"id":"52","email":"wes","name":"Wes","body":"well"}
   console.log("CREATING A NEW COMMENT ON POST  ID: " + JSON.stringify(params))
   axios({
     method: 'post',
@@ -86,10 +86,10 @@ router.post('/posts/:id/comments', function(req,res,next){
   })
 })
 
-router.get('/categories', function(req, res,next){
+router.get('/categories', function(req, res, next){
   axios({
     method: 'get',
-    url: `${process.env.MAILCHIMP_USERNAME}/wp-json/wp/v2/categories?_embed`
+    url: `${process.env.WORDPRESS_BASE_URL}/wp-json/wp/v2/categories?_embed`
   }).then(function (response){
     return res.status(200).json({response: response.data})
   }).catch(function(error){

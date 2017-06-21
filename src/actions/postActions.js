@@ -12,7 +12,6 @@ export function successPostingComment(response){
 }
 
 export function successRequestingPost(response){
-  debugger
   if(response.data.response.length !== undefined){
     return { type: constants.ADD_POST, post: response.data.response[0]};
   }else if(response.data.response.length === undefined){
@@ -54,7 +53,6 @@ export function requestAllPosts(){
     ).then(
       response => dispatch(ui.loadingChanged(false))
     ).catch(e => {
-        debugger
         dispatch(ui.displayError(e.response.data.response.detail)), dispatch(ui.loadingChanged(false))
       }
     )

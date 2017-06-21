@@ -5,6 +5,7 @@ const express = require('express')
 const morgan = require('morgan')
 const path = require('path')
 const fs = require('fs')
+var cors = require('cors')
 
 require('babel-register')({ ignore: /\/(build|node_modules)\//, presets: ['react-app'] })
 
@@ -19,6 +20,7 @@ const universalLoader = require('./universal')
 
 
 const app = express()
+app.use(cors())
 
 // Support Gzip
 app.use(compression())

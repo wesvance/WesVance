@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import '../../../assets/styles/components/blog/post/Posts.scss';
 import * as postActions from '../../../actions/postActions';
@@ -33,7 +33,9 @@ class Posts extends React.Component{
   displayPosts(posts){
     if(posts){
       if(posts.length > 0){
-        return(posts.map((post) => this.renderPostByType(post)));
+        return(posts.map((post) => {
+          return this.renderPostByType(post)
+        }));
       }else{
         return(<h1>Sorry No Posts Found :(</h1>)
       }
@@ -102,10 +104,6 @@ class Posts extends React.Component{
         allowedTags: [''],
         allowedAttributes: {}
       }))
-      // this.createMarkup(sanitizeHtml(this.prettyTrim(htmlString, 610, true), {
-      //   allowedTags: ['iframe'],
-      //   allowedAttributes: {'iframe': ['width', 'height', 'scrolling', 'frameborder', 'src']}
-      // }))
     )
   }
 

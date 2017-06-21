@@ -18,7 +18,7 @@ module.exports = function universalLoader(req, res) {
       return res.status(404).end()
     }
     const context = {}
-    const store = configureStore()
+    const store = configureStore;
     const markup = renderToString(
       <Provider store={store}>
         <StaticRouter

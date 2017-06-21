@@ -30,8 +30,8 @@ export default class App extends Component {
             <Switch>
               <Route exact path="/" component={WelcomePage}/>
               <Route path="/about" component={AboutPage}/>
-              <Route path="/posts" component={BlogPage} />
               <Route path='/posts/:postSlug' component={PostPage} />
+              <Route path="/posts" component={BlogPage} />
               <Route component={Error404Page} />
             </Switch>
           </div>

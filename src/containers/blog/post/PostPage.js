@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import '../../../assets/styles/components/blog/post/PostPage.scss';
 import * as postActions from '../../../actions/postActions';
 
@@ -44,8 +44,9 @@ class PostPage extends React.Component{
   }
 
   componentWillMount(){
+    debugger
     if(!this.props.post){
-      this.props.postActions.requestPost(this.props.routeParams.postSlug);
+      this.props.postActions.requestPost(this.props.match.params.postSlug);
       // this.props.postActions.requestAllPosts();
     }
     // debugger
@@ -679,7 +680,7 @@ function mapStateToProps(state, ownProps){
   // IF YOU HAVE THE POSTS IN THE STATE USE IT, OTHERWISE USE THE CURRENTPOST LOADED FROM A NEW API CALL IN COMPONENTWILLMOUNT
   if(state.posts && state.posts.allPosts){
     return({
-      post: state.posts.allPosts.filter(post => {return post.slug === ownProps.routeParams.postSlug})[0]
+      post: state.posts.allPosts.filter(post => {return post.slug === ownProps.match.params.postSlug})[0]
     })
   }else{
     return({
