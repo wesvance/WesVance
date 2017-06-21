@@ -12,6 +12,7 @@ npm install
 npm run build
 npm run start:server
 ```
+**NOTE** When deploying to Heroku, you might have to delete your Yarn.Lock file.
 
 ### Development
 This just runs create react app, its great!
