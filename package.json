@@ -82,7 +82,8 @@
     "start:server": "NODE_ENV=development node server/index.js",
     "now-start": "NODE_ENV=production node server/index.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "heroku-postbuild": "npm run build"
   },
   "jest": {
     "collectCoverageFrom": [
