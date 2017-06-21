@@ -21,9 +21,10 @@ const universalLoader = require('./universal')
 
 const app = express()
 
-app.use(cors())
+// app.use(cors())
 // use it before all route definitions
 app.use(cors({origin: process.env.SERVER_BASE_URL}));
+app.options('*', cors()); 
 
 // Support Gzip
 app.use(compression())

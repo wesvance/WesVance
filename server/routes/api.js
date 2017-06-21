@@ -4,18 +4,30 @@ var axios = require('axios');
 var _ = require('lodash');
 
 router.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*")
+  // CORS headers
+  res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain
   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  // Set custom headers for CORS
+  res.header("Access-Control-Allow-Headers", "Content-type,Accept,X-Custom-Header");
 
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
 
-  if(req.headers['x-forwarded-proto'] != 'https' && process.env.NODE_ENV === 'production')
-    res.redirect('https://'+req.hostname+req.url)
-  else
-    next() /* Continue to other routes if we're not redirecting */
+  return next();
+
+  // res.header("Access-Control-Allow-Origin", "*")
+  // res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+  // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+  // if (req.method === "OPTIONS") {
+  //   return res.status(200).end();
+  // }
+
+  // if(req.headers['x-forwarded-proto'] != 'https' && process.env.NODE_ENV === 'production')
+  //   res.redirect('https://'+req.hostname+req.url)
+  // else
+  //   next() /* Continue to other routes if we're not redirecting */
 })
 
 router.get('/', function(req, res, next) {
