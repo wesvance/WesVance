@@ -7,9 +7,7 @@ import configureStore from './store/configureStore'
 import './assets/styles/index.scss'
 import App from './containers/App'
 
-// Let the reducers handle initial state
-const initialState = {}
-const store = configureStore(initialState)
+import store from './store/store';
 
 ReactDOM.render(
   <Provider store={store}>

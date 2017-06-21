@@ -1,4 +1,4 @@
-import createStore from './configureStore';
+import configureStore from './configureStore';
 import {loadState, saveState} from './localStorage';
 import throttle from 'lodash/throttle';
 
@@ -20,7 +20,7 @@ function selectAppState(initialState, persistedState){
   }
 }
 
-const store = createStore(
+const store = configureStore(
   selectAppState(
     initialState,
     persistedState
@@ -32,10 +32,10 @@ const store = createStore(
 // ENABLE ALL THIS ON PRODUCTION
 store.subscribe(throttle(()=> {
   saveState({
-    // ui: store.getState().ui,
-    // posts: store.getState().posts,
-    // categories: store.getState().categories
-    // post: store.getState().post
+    ui: store.getState().ui,
+    posts: store.getState().posts,
+    categories: store.getState().categories,
+    post: store.getState().post
   });
 }, 1000));
 
