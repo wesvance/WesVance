@@ -1,9 +1,10 @@
 @import "../../globals";
 
 .BannerComponent{
-  position: relative;
+  // position: relative;
   .bannerBackground{
     // width: 100%;
+    position: relative;
     height: 140px; //15vw
     background-color: $green-color;
     h1{
