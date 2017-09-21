@@ -37,7 +37,7 @@ class AboutPage extends React.Component{
         <div className="container">
 
           <div className="row">
-            <div className="col-12 col-lg-6 offset-lg-6">
+            <div className="col-12 offset-lg-6 col-lg-6">
               <div className="aboutTitleContainer">
                 <h1>Hi my name is Wes!</h1>
                 <h3 className="aboutSubTitle">
