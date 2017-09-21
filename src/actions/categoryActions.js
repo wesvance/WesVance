@@ -3,8 +3,11 @@ import * as ui from './uiActions';
 
 import Axios from '../config/axios';
 
-export function successRequestingCategories(response){
-  return { type: constants.ADD_CATEGORIES, categories: response.data.response};
+function successRequestingCategories(response){
+  return { 
+    type: constants.ADD_CATEGORIES,
+    categories: response.data.response
+  }
 }
 
 export function requestAllCategories(){
@@ -15,7 +18,8 @@ export function requestAllCategories(){
       response => dispatch(successRequestingCategories(response))
     ).then(response => dispatch(ui.loadingChanged(false))
     ).catch(e => {
-        dispatch(ui.displayError(e.response.data.response.detail)), dispatch(ui.loadingChanged(false))
+        dispatch(ui.displayError(e.response.data.response.detail))
+        dispatch(ui.loadingChanged(false))
       }
     )
   }

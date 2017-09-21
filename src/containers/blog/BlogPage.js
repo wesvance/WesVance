@@ -93,7 +93,7 @@ class BlogPage extends React.Component{
 
   filterPostsByActiveCategory(posts, activeCategories){
     if(posts && activeCategories){
-      let activeCategoriesIDArray = activeCategories.map(category => {return category.id})
+      // let activeCategoriesIDArray = activeCategories.map(category => {return category.id})
       // let filteredPosts = posts.map(post => {
       //   if(post._embedded && post._embedded['wp:term']){
       //     let postCategories = post._embedded['wp:term'][0];
