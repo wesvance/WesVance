@@ -49,7 +49,7 @@ class AboutPage extends React.Component{
                 </h4>
               </div>
             </div>
-            <div className="col-12 col-md-7 offset-md-5">
+            <div className="col-12 offset-md-5 col-md-7">
               <h3 className="aboutSubBodyText">
                 This intersection is a magical place where successful startups are created, products are built, and problems are solved.
               </h3>
@@ -68,7 +68,7 @@ class AboutPage extends React.Component{
         <div className="container">
           <div className="activeTopics">
             <div className="row topic">
-              <div className="col-12 col-lg-6 offset-lg-3">
+              <div className="col-12 offset-lg-3 col-lg-6">
                 <h3>Some things I do</h3>
               </div>
             </div>
@@ -83,7 +83,7 @@ class AboutPage extends React.Component{
               </div>
             </div>
             <div className="row topic">
-              <div className="col-12 col-lg-6 offset-lg-3">
+              <div className="col-12 offset-lg-3 col-lg-6">
                 <p>If hiring a company to help with product development seems too intimidating, or if you want to explore the possibilities of building a product without diving in head first, then LAUNCH is for you! I wrote LAUNCH to be a complete guide to building your first app. It’s broken down into bite sized pieces that you can do over a few weekends. It’s written for people who are serious about building their idea, but don't know where to start. </p>
               </div>
               <div className="col-12 col-lg-3 imgContainer">
@@ -101,7 +101,7 @@ class AboutPage extends React.Component{
               </div>
             </div>
             <div className="row topic">
-              <div className="col-12 col-lg-6 offset-lg-3">
+              <div className="col-12 offset-lg-3 col-lg-6">
                 <p>On a lighter note, I host a fun Tech Trivia night on the first Tuesday of each month at Trophy Brewing- Maywood in downtown Raleigh. There is amazing free Trophy beer and a bunch of techies. If you’re in the Raleigh area on the first Tuesday of any month, stop on by and see if you can get any of the 20 questions right! </p>
               </div>
               <div className="col-12 col-lg-3 imgContainer">
@@ -120,7 +120,7 @@ class AboutPage extends React.Component{
               </div>
             </div>
             <div className="row extratopics">
-              <div className="col-12 col-lg-6 offset-lg-3">
+              <div className="col-12 offset-lg-3 col-lg-6">
                 <a href="https://www.meetup.com/Triangle-TechBreakfast/" target='_blank'>
                   <img src={TechBreakfast} alt="Tech Breakfast" className="img-responsive"/>
                 </a>
