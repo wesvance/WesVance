@@ -8,6 +8,7 @@ import NavBar from './common/NavBar';
 import ScrollToTop from './ScrollToTop';
 
 import {Helmet} from "react-helmet";
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 // =======
 // ROUTES
 // =======
