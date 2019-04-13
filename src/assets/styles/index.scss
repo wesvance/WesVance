@@ -15,8 +15,10 @@
 @import './common/images';
 
 html {
-  user-select: none;
-  -webkit-user-select: none;
+  img{
+    user-select: none;
+    -webkit-user-select: none;
+  }
   height: 100%;
 }
 
