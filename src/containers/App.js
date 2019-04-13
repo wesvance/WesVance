@@ -36,7 +36,7 @@ export default class App extends Component {
                 <Route path='/posts/:postSlug' component={PostPage} />
                 <Route path="/posts" component={BlogPage} />
                 <Route path="/talks" 
-                  component={() => window ? window.location = 'https://www.notion.so/vancefamily/Talks-e4eea0cdc9f74b49b8253629748052af' : null }/>
+                  component={() => typeof window !== 'undefined' ? window.location = 'https://www.notion.so/vancefamily/Talks-e4eea0cdc9f74b49b8253629748052af' : null }/>
                 <Route component={Error404Page} />
               </Switch>
             </div>
