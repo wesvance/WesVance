@@ -7,7 +7,7 @@ import * as uiActions from '../../actions/uiActions';
 import MailingList from '../common/MailingList';
 
 import SXSW from '../../assets/images/logos/sxsw.png';
-import YouMeAndTheParks from '../../assets/images/logos/youmeandtheparks-horizontal-2.png';
+import YouMeAndTheParks from '../../assets/images/logos/youmeandtheparks-h.png';
 import Apollo from '../../assets/images/logos/apollo.png';
 
 
