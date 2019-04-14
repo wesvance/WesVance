@@ -62,7 +62,7 @@ class MailingList extends React.Component{
     if(message){
       return(
         <div className="row">
-          <div className="col-12">
+          <div className="col">
             <p className='form-errors'>{message}</p>
           </div>
         </div>
@@ -91,7 +91,9 @@ class MailingList extends React.Component{
               value={this.state.email}/>
           </div>
           <div className="col-sm-12 col-md-4">
-            <button className="btn btn-default" onClick={this.submitNewMember}>{buttonText}</button>
+            <button className="btn btn-default" onClick={this.submitNewMember} style={{whiteSpace: 'nowrap'}}>
+              {buttonText}
+            </button>
           </div>
         </div>
       </div>
