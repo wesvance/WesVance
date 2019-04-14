@@ -121,18 +121,19 @@ class MailingList extends React.Component{
     }
   }
   render(){
+    const {body, header, subscribers} = this.props
     return(
       <div className="MailingList">
         {this.displayConfetti()}
         <div className="row">
           <div className="col-sm-12">
-            {this.displayTitle(this.props.header)}
-            {this.displayBody(this.props.body)}
+            {this.displayTitle(header)}
+            {this.displayBody(body)}
           </div>
         </div>
         <div className="row">
           <div className="col">
-            {this.displayForm('Your email address...', 'Join ' + this.props.subscribers + ' Awesome People')}
+            {this.displayForm('Your email address...', 'Join ' + subscribers + ' Awesome People')}
           </div>
         </div>
       </div>

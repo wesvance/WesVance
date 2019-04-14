@@ -12,16 +12,6 @@ import Apollo from '../../assets/images/logos/apollo.png';
 
 
 class WelcomePage extends React.Component{
-  constructor(props, context){
-    super(props, context);
-    this.state = {
-    };
-  }
-
-  componentDidMount(){
-
-  }
-
   render(){
     return(
       <div id="WelcomePage">
@@ -31,8 +21,16 @@ class WelcomePage extends React.Component{
               <div className="row">
                 <div className="col-md-12">
                   <div className="welcomeTitle">
-                    <h1>Hi I’m <span className="redText">Wes Vance</span> a <span className="purpleText">coder</span>, <span className="greenText">designer</span> and <span className="blueText">business developer</span></h1>
-                    <h3>I spend my time helping small businesses, validate, design, develop and code their wildest ideas.</h3>
+                    <h1>
+                      Hi I’m <span className="redText">Wes Vance</span> a
+                      <span className="purpleText"> coder</span>, 
+                      <span className="greenText"> writer</span> and 
+                      <span className="blueText"> digital nomad</span>
+                    </h1>
+                    <h3>
+                      I design, and code business' wildest web apps while traveling in my van 
+                      visiting & educating people on the National Parks of the world!
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -56,7 +54,10 @@ class WelcomePage extends React.Component{
               <div className="row">
                 <div className="col-10">
                   <MailingList
-                    body={"Helpful, awesome, spam-less articles teaching business, code and design right to your inbox, every Wednesday - Just for subscribers."}/>
+                    body={<h4>
+                      Take a peak behind the scenes and learn how to run your own business while traveling full-time! 
+                      ONE email per week with no spam, exclusive for subscribers.
+                    </h4>}/>
                 </div>
               </div>
             </div>
