@@ -28,7 +28,7 @@ class WelcomePage extends React.Component{
                       <span className="blueText"> digital nomad</span>
                     </h1>
                     <h3>
-                      I design, and code business' wildest web apps while traveling in my van 
+                      I design, and code innovative business web apps while traveling in my van 
                       visiting & educating people on the National Parks of the world!
                     </h3>
                   </div>

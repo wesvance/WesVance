@@ -31,9 +31,10 @@ class AboutPage extends React.Component{
             </div>
             <div className="col-12 offset-md-5 col-md-7">
               <h3 className="aboutSubBodyText">
-                I validate, design, code and scale business' wildest web apps, 
+                I validate, design, code and scale innovative business web apps, 
                 while traveling full time in my ford transit van, visiting and 
-                educating people on the National Parks of the world!              </h3>
+                educating people on the National Parks of the world!              
+              </h3>
             </div>
           </div>
         </div>
