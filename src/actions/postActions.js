@@ -28,7 +28,7 @@ export function removePost(){
 // THUNKS HERE
 export function submitNewComent(post, comment){
   return function(dispatch){
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       dispatch(ui.loadingChanged(true));
       let requestUrl = `/api/posts/${post.id}/comments`
       return Axios.post(requestUrl, {
