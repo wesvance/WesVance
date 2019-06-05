@@ -38,6 +38,7 @@ export function submitNewComent(post, comment){
       }).then(response => {
         dispatch(successPostingComment(response))
         dispatch(ui.loadingChanged(false))
+        console.log("YAY COMMENT POSTED: ", response.data.response);
         resolve(response.data.response)
       }).catch(e => {
         console.log("ERROR Posting Comment: ", e)
