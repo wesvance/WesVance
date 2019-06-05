@@ -38,9 +38,10 @@ export function submitNewComent(post, comment){
       response => dispatch(successPostingComment(response))
     ).then(
       response => dispatch(ui.loadingChanged(false))
-    ).catch(
-      e => dispatch(ui.loadingChanged(false))
-    )
+    ).catch(e => {
+      console.log("ERROR Posting Comment: ", e)
+      dispatch(ui.loadingChanged(false))
+    })
   }
 }
 export function requestAllPosts(){

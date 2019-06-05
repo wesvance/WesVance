@@ -120,7 +120,10 @@ class AboutPage extends React.Component{
           <div className="row">
             <div className="col-10">
               <MailingList
-                body={"Helpful, awesome, spam-less articles teaching business, code and design right to your inbox, every Wednesday - Just for subscribers."}/>
+                body={`
+                  Take a peak behind the scenes and learn how to run your own business 
+                  while traveling full-time! ONE email per week with no spam, exclusive for subscribers.
+                `}/>
             </div>
           </div>
         </div>
