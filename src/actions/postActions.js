@@ -28,19 +28,22 @@ export function removePost(){
 // THUNKS HERE
 export function submitNewComent(post, comment){
   return function(dispatch){
-    dispatch(ui.loadingChanged(true));
-    let requestUrl = `/api/posts/${post.id}/comments`
-    return Axios.post(requestUrl, {
-      email: comment.email,
-      name: comment.name,
-      body: comment.body
-    }).then(
-      response => dispatch(successPostingComment(response))
-    ).then(
-      response => dispatch(ui.loadingChanged(false))
-    ).catch(e => {
-      console.log("ERROR Posting Comment: ", e)
-      dispatch(ui.loadingChanged(false))
+    new Promise((resolve, reject) => {
+      dispatch(ui.loadingChanged(true));
+      let requestUrl = `/api/posts/${post.id}/comments`
+      return Axios.post(requestUrl, {
+        email: comment.email,
+        name: comment.name,
+        body: comment.body
+      }).then(response => {
+        dispatch(successPostingComment(response))
+        dispatch(ui.loadingChanged(false))
+        resolve(response.data.response)
+      }).catch(e => {
+        console.log("ERROR Posting Comment: ", e)
+        dispatch(ui.loadingChanged(false))
+        reject(e);
+      })
     })
   }
 }

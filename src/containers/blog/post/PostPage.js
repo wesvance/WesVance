@@ -584,15 +584,23 @@ class PostPage extends React.Component{
     })
   }
   onSubmitComment(){
-    if(this.state.commentForm && this.state.commentForm.email && this.state.commentForm.body && this.state.commentForm.name){
-      this.props.postActions.submitNewComent(this.props.post, this.state.commentForm)
-      this.setState({
-        commentForm:{
-          email: '',
-          name: '',
-          body: ''
-        },
-        message: 'Thanks for your comment! Wes will review and approve asap.'
+    const {commentForm} = this.state;
+    const {post, postActions} = this.props;
+
+    if(commentForm && commentForm.email && commentForm.body && commentForm.name){
+      postActions.submitNewComent(post, commentForm).then(res => {
+        this.setState({
+          commentForm:{
+            email: '',
+            name: '',
+            body: ''
+          },
+          message: 'Thanks for your comment! Wes will review and approve asap.'
+        })
+      }).catch(err => {
+        this.setState({
+          message: 'Sorry, we had trouble submitting your comment :('
+        })
       })
     }else{
       this.setState({message: 'Please enter all fields'})
