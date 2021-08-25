@@ -17,6 +17,18 @@
     h3{
       padding-top: 20px;
       padding-bottom: 40px;
+      a{
+        color: $primary-orange;
+        text-decoration: none !important;
+      }
+      a:hover{
+        color: $primary-orange;
+        text-decoration: none;
+      }
+      a:visited{
+        // color: 
+        text-decoration: none;
+      }
     }
   }
 }

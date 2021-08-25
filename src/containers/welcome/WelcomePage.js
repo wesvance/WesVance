@@ -6,10 +6,9 @@ import * as uiActions from '../../actions/uiActions';
 
 import MailingList from '../common/MailingList';
 
-import SXSW from '../../assets/images/logos/sxsw.png';
 import YouMeAndTheParks from '../../assets/images/logos/youmeandtheparks-h.png';
 import Apollo from '../../assets/images/logos/apollo.png';
-
+import ExploreHere from '../../assets/images/logos/explorehere-horizontal.png';
 
 class WelcomePage extends React.Component{
   render(){
@@ -24,30 +23,30 @@ class WelcomePage extends React.Component{
                     <h1>
                       Hi I’m <span className="redText">Wes Vance</span> a
                       <span className="purpleText"> coder</span>, 
-                      <span className="greenText"> writer</span> and 
+                      <span className="greenText"> founder</span> and 
                       <span className="blueText"> digital nomad</span>
                     </h1>
                     <h3>
-                      I design, and code innovative business web apps while traveling in my van 
-                      visiting & educating people on the National Parks of the world!
+                      I design, and code full stack web & mobile, <a href="http://explorehere.app" target='_blank'>travel & outdoor apps</a>, while traveling 
+                      in my own van visiting & educating people on the National Parks of the world!
                     </h3>
                   </div>
                 </div>
               </div>
               <div className="row">
-                <div className="col-6 col-sm-3">
+                <div className="col-8 col-sm-3 mt-3">
+                  <a href="https://explorehere.app" target="_blank">
+                    <img src={ExploreHere} alt="ExploreHere" className="img-responsive"/>
+                  </a>
+                </div>
+                <div className="col-8 col-sm-3">
                   <a href="http://apollostu.com" target="_blank">
                     <img src={Apollo} alt="ApolloStudios" className="img-responsive"/>
                   </a>
                 </div>
-                <div className="col-6 col-sm-3 text-center">
+                <div className="col-8 col-sm-3">
                   <a href="http://youmeandtheparks.com" target="_blank">
                     <img src={YouMeAndTheParks} alt="YouMeAndTheParks" className="img-responsive"/>
-                  </a>
-                </div>
-                <div className="col-6 col-sm-3 text-center">
-                  <a href="https://schedule.sxsw.com/2017/events/PP69025" target="_blank">
-                    <img src={SXSW} alt="SXSW" className="img-responsive"/>
                   </a>
                 </div>
               </div>
@@ -55,7 +54,7 @@ class WelcomePage extends React.Component{
                 <div className="col-10">
                   <MailingList
                     body={<h4>
-                      Take a peak behind the scenes and learn how to run your own business while traveling full-time! 
+                      Take a peak behind the scenes and learn how to build your own business while traveling full-time! 
                       ONE email per week with no spam, exclusive for subscribers.
                     </h4>}/>
                 </div>

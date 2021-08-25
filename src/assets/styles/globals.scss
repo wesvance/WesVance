@@ -1,6 +1,8 @@
 // Global variables go here ;D
-$primary-color: #FFCC00;
-$primary-color-alt: #FFDC4F;
+$primary-color: #425F4A;
+$primary-color-alt: #89B08F;
+
+$primary-orange: #FFA649;
 
 $dark-font-color: #29292C;
 $dark-background-color: #29292C;
@@ -23,4 +25,4 @@ $dark-border-color: #979797;
 $light-border-color: #EAEAEA;
 $borderBase: solid 1px lighten($dark-border-color, 60%);
 
-$standard-shadow: 0px 2px 4px rgba(0,0,0,.5);
+$standard-shadow: 0px 3px 10px rgba(0,0,0,.1);

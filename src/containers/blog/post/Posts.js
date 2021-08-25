@@ -112,8 +112,12 @@ class Posts extends React.Component{
       <div key={post.id} className="postContainer">
         <div className="row">
           <div className="col-12">
-            <Link to={'/posts/' + post.slug}><h3>{post.title.rendered}</h3></Link>
-            <div className="postBody" dangerouslySetInnerHTML={this.sanitizeInput(post.content.rendered)}/>
+            <h3>
+              <Link to={'/posts/' + post.slug}>{post.title.rendered}</Link>
+            </h3>
+            <Link to={'/posts/' + post.slug}>
+              <div className="postBody" dangerouslySetInnerHTML={this.sanitizeInput(post.content.rendered)}/>
+            </Link>
           </div>
         </div>
       </div>

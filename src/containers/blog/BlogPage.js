@@ -87,7 +87,7 @@ class BlogPage extends React.Component{
 
   filterCategoriesByCount(categories){
     if(categories){
-      return categories.filter((_category) => _category.count > 0)
+      return categories.filter((_category, index) => _category.count > 0).splice(0, 5)
     }
   }
 
