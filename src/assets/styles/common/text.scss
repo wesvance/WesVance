@@ -1,7 +1,7 @@
 @import "../globals";
 
-
 h1 {
+  color: $primary-color;
   font-family: Poppins;
   font-weight: 300;
 
@@ -9,6 +9,7 @@ h1 {
   -webkit-user-select: auto;
 }
 h2 {
+  color: $primary-color;
   font-family: Poppins;
   font-weight: 300;
 
@@ -16,6 +17,7 @@ h2 {
   -webkit-user-select: auto;
 }
 h3 {
+  color: $primary-color;
   font-family: Poppins;
   font-weight: 400;
 
@@ -23,6 +25,7 @@ h3 {
   -webkit-user-select: auto;
 }
 h4 {
+  color: $primary-color;
   font-family: Poppins;
   font-weight: 400;
 
@@ -30,6 +33,7 @@ h4 {
   -webkit-user-select: auto;
 }
 h5 {
+  color: $primary-color;
   font-family: Poppins;
   font-weight: 400;
 
@@ -37,6 +41,7 @@ h5 {
   -webkit-user-select: auto;
 }
 h6 {
+  color: $primary-color;
   font-family: Poppins;
   font-weight: 400;
 
@@ -44,7 +49,7 @@ h6 {
   -webkit-user-select: auto;
 }
 
-p{
+p {
   font-family: Baarlow;
   font-weight: 400;
   font-size: 20px;
@@ -52,9 +57,10 @@ p{
   -webkit-user-select: auto;
 }
 
-li{
-  font-family: Poppins;
-  font-weight: 300;
+li {
+  font-family: Baarlow;
+  font-size: 20px;
+  font-weight: 400;
 
   user-select: auto;
   -webkit-user-select: auto;
@@ -69,16 +75,15 @@ p.quote {
   -webkit-user-select: auto;
 }
 
-
-.redText{
+.redText {
   color: $red-color;
 }
-.greenText{
+.greenText {
   color: $green-color;
 }
-.blueText{
+.blueText {
   color: $blue-color;
 }
-.purpleText{
+.purpleText {
   color: $purple-color;
 }
