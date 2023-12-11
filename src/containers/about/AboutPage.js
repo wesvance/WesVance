@@ -88,9 +88,9 @@ class AboutPage extends React.Component{
                 </p> */}
               </div>
               <div className="col-12 col-lg-3 imgContainer">
-                <a href="http://apollostu.com" target='_blank'>
+                {/* <a href="http://apollostu.com" target='_blank'> */}
                   <img src={Apollo} alt="Apollo Studios" className="img-responsive tabletHide"/>
-                </a>
+                {/* </a> */}
               </div>
               {/* <div className="col-12 col-lg-3 imgContainer align-self-end">
                 <a href="http://apollostu.com" target='_blank'>

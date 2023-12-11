@@ -40,9 +40,9 @@ class WelcomePage extends React.Component{
                   </a>
                 </div>
                 <div className="col-8 col-sm-3">
-                  <a href="http://apollostu.com" target="_blank">
+                  {/* <a href="http://apollostu.com" target="_blank"> */}
                     <img src={Apollo} alt="ApolloStudios" className="img-responsive"/>
-                  </a>
+                  {/* </a> */}
                 </div>
                 <div className="col-8 col-sm-3">
                   <a href="http://youmeandtheparks.com" target="_blank">
